@@ -1,6 +1,6 @@
 # Rolling VaR engines and backtesting for an equal weight US equity sleeve
 
-I built a compact risk research pipeline for a ten million dollar equal weight US equity sleeve. It estimates one day risk using parametric and historical engines, adds bootstrap confidence bands, and backtests exception rates. The repo keeps outputs and figures clean so a reviewer can skim results fast.
+I built a compact risk research pipeline for a ten million dollar equal weight US equity sleeve. It estimates one day risk using parametric and historical engines, adds bootstrap confidence bands, and backtests exception rates.
 
 ## Summary
 I form daily portfolio returns from adjusted prices with adaptive weights when names have gaps. Parametric VaR uses rolling sample mean and covariance. Historical VaR uses a rolling empirical quantile of portfolio returns. Bootstrap intervals use percentile resampling of the window. Backtesting compares realized losses against the latest forecast to count exceptions over a recent evaluation window.
@@ -61,7 +61,5 @@ The repo ships with small preview figures so the README renders nicely on first 
 Parametric VaR computes rolling mean and covariance and uses the normal quantile on the portfolio mean and variance. Historical VaR is a rolling quantile of realized portfolio returns. Bootstrap intervals resample the estimation window and rebuild the estimator for each draw.
 
 ## Why I built this
-I first explored the idea during my time at UC Berkeley and shaped it into a clean project repo. It reads like independent research and not coursework.
+I first explored the idea during my time at UC Berkeley and shaped it into this project repo. 
 
-## License and contact
-MIT license. Contact julien dot sklarik at berkeley dot edu
